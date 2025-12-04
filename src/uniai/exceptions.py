@@ -1,5 +1,7 @@
 """Custom exceptions for UniAI."""
 
+from typing import Optional
+
 
 class UniAIError(Exception):
     """Base exception for all UniAI errors."""
@@ -28,8 +30,8 @@ class APIError(UniAIError):
     def __init__(
         self,
         message: str,
-        status_code: int | None = None,
-        response: dict | None = None,
+        status_code: Optional[int] = None,
+        response: Optional[dict] = None,
     ):
         self.status_code = status_code
         self.response = response
