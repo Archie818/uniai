@@ -1,12 +1,14 @@
 """LLM Provider implementations."""
 
-from uniai.providers.openai import OpenAIProvider
 from uniai.providers.deepseek import DeepSeekProvider
+from uniai.providers.gemini import GeminiProvider
+from uniai.providers.openai import OpenAIProvider
 
 # Registry of available providers
 PROVIDERS: dict[str, type] = {
     "openai": OpenAIProvider,
     "deepseek": DeepSeekProvider,
+    "gemini": GeminiProvider,
 }
 
 
@@ -44,6 +46,7 @@ def register_provider(name: str, provider_class: type) -> None:
 __all__ = [
     "OpenAIProvider",
     "DeepSeekProvider",
+    "GeminiProvider",
     "PROVIDERS",
     "get_provider",
     "register_provider",

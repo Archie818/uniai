@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uniai"
-version = "0.1.0"
+version = "0.1.2"
 description = "A universal AI interface layer for seamless LLM provider switching"
 readme = "README.md"
 license = "MIT"
@@ -28,6 +28,7 @@ dependencies = [
     "pydantic>=2.0.0",
     "httpx>=0.25.0",
     "openai>=1.0.0",
+    "google-generativeai>=0.8.0",
 ]
 
 [project.optional-dependencies]

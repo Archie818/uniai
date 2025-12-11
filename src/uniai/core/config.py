@@ -41,3 +41,9 @@ class ClaudeConfig(ProviderConfig):
     model: str = "claude-3-5-sonnet-20241022"
     max_tokens: int = Field(default=4096, ge=1)  # Claude requires max_tokens
 
+
+class GeminiConfig(ProviderConfig):
+    """Configuration specific to Google Gemini provider."""
+
+    model: str = "gemini-2.0-flash"
+
